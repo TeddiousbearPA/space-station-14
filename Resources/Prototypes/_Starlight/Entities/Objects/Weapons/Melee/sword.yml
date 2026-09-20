@@ -211,6 +211,78 @@
         path: /Audio/Weapons/bladeslice.ogg
     - type: Item
 
+- type: entity
+  name: glexcalibur
+  parent: [ BaseSword, BaseMajorContraband, Welder ]
+  id: SwordGlexcalibur
+  description: How did you get this?? Why does it smell like frezon?! Why is it so cold?! Who's Glek Glek?!?
+  components:
+    - type: Sprite
+      sprite: _Starlight/Objects/Weapons/Melee/gleksword.rsi
+      layers:
+        - state: icon
+        - state: welder_flame
+          visible: false
+          shader: unshaded
+          map: ["enum.ToggleableVisuals.Layer"]
+    - type: GenericVisualizer
+      visuals:
+        enum.ToggleableVisuals.Enabled:
+          enum.ToggleableVisuals.Layer:
+            True: { visible: true }
+            False: { visible: false }
+    - type: PointLight
+      enabled: false
+      radius: 3
+    - type: Reflect
+      reflectProb: .1
+      spread: 90
+    - type: ItemToggle
+      predictable: false
+      soundActivate:
+        collection: WelderOn
+        params:
+          variation: 0.125
+          volume: -5
+      soundDeactivate:
+        collection: WelderOff
+        params:
+          variation: 0.125
+          volume: -5
+    - type: ItemToggleMeleeWeapon
+      activatedSoundOnHit:
+        path: /Audio/Weapons/Guns/Hits/energy_meat1.ogg
+        params:
+          variation: 0.250
+          volume: -10
+      activatedSoundOnHitNoDamage:
+        path: /Audio/Weapons/Guns/Hits/energy_meat1.ogg
+        params:
+          variation: 0.250
+          volume: -12
+      deactivatedSoundOnHitNoDamage:
+        collection: MetalThud
+      activatedDamage:
+        types:
+          Cold: 12
+          Slash: 10
+    - type: MeleeWeapon
+      damage:
+        types:
+          Slash: 16
+      soundHit:
+        path: /Audio/Weapons/bladeslice.ogg
+    - type: Item
+      sprite: _Starlight/Objects/Weapons/Melee/gleksword.rsi
+    - type: DisarmMalus
+    - type: Clothing
+      sprite: _Starlight/Objects/Weapons/Melee/gleksword.rsi
+      slots:
+        - suitStorage
+    - type: Construction
+      graph: SwordFlamingGraph
+      node: sword
+
 # TODO: Make this part of Chaplain Nullrod when its coded...
 - type: entity
   name: sacred chainsaw sword
