@@ -889,6 +889,7 @@
       visible: false
       shader: unshaded
       map: [ "light" ]
+  - type: WizardClothes
   - type: HandheldLight
     addPrefix: false
   - type: ToggleableVisuals
@@ -1158,6 +1159,7 @@
     damageContainers:
     - Biological
     - Hybrid # Neocytes
+    - MoffDemonBiological
   - type: ShowHealthIcons
   - type: FlashImmunity
     blocksSpecialVision: false
@@ -1200,6 +1202,7 @@
     damageContainers:
     - Biological
     - Hybrid # Neocytes
+    - MoffDemonBiological
   - type: ShowHealthIcons
   - type: FlashImmunity
     blocksSpecialVision: false
@@ -1263,6 +1266,11 @@
     - state: icon-helmet
   - type: Clothing
     sprite: _Starlight/CosmicCult/Clothing/cosmiccult_armor.rsi
+  - type: Tag
+    tags:
+    - MonkeyWearable
+    - ScurretWearable
+    - CorgiWearable
   - type: PressureProtection
     highPressureMultiplier: 0.3
     lowPressureMultiplier: 1000
@@ -1322,3 +1330,26 @@
         Slash: 0.9
         Piercing: 0.95
         Heat: 0.85
+
+- type: entity
+  parent: [ ClothingHeadHardsuitBase ]
+  id: ClothingHeadHelmetHardsuitLossPrevention
+  name: ITG loss prevention helmet
+  description: Theres a scratch mark on the side for every shoplifter that has had the displeasure of seeing this helmet.
+  components:
+  - type: Sprite
+    sprite: _Starlight/Clothing/Head/Hardsuits/lossprevention.rsi
+  - type: Clothing
+    sprite: _Starlight/Clothing/Head/Hardsuits/lossprevention.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.3
+    lowPressureMultiplier: 1000
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+  - type: Tag
+    tags:
+    - WhitelistChameleon
