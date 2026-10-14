@@ -16,6 +16,10 @@
             "copyright": "Hanz5579(discord)"
         },
         {
+            "name": "base-overlay",
+            "copyright": "Hanz5579(discord)"
+        },
+        {
             "name": "bolt-open",
             "copyright": "Hanz5579(discord)"
         },
@@ -75,7 +79,17 @@
             "directions": 4
         },
         {
+            "name": "inhand-left-light",
+            "copyright": "Hanz5579(discord)",
+            "directions": 4
+        },
+        {
             "name": "inhand-right",
+            "copyright": "Hanz5579(discord)",
+            "directions": 4
+        },
+        {
+            "name": "inhand-right-light",
             "copyright": "Hanz5579(discord)",
             "directions": 4
         },
@@ -85,7 +99,17 @@
             "directions": 4
         },
         {
+            "name": "wielded-inhand-left-light",
+            "copyright": "Hanz5579(discord)",
+            "directions": 4
+        },
+        {
             "name": "wielded-inhand-right",
+            "copyright": "Hanz5579(discord)",
+            "directions": 4
+        },
+        {
+            "name": "wielded-inhand-right-light",
             "copyright": "Hanz5579(discord)",
             "directions": 4
         },
