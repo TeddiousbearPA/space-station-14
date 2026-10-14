@@ -497,7 +497,14 @@
       map: [ "light" ]
     - state: mag-0
       map: [ "enum.GunVisualLayers.Mag" ]
-
+    - state: wielded-inhand-left-light
+      shader: unshaded
+      visible: false
+      map: [ "light" ]
+    - state: wielded-inhand-right-light
+      shader: unshaded
+      visible: false
+      map: [ "light" ]
   - type: Clothing
     sprite: _Starlight/Objects/Weapons/Guns/Rifles/renegade.rsi
   - type: Item
@@ -548,13 +555,6 @@
         shader: unshaded
       right:
       - state: inhand-right-light
-        shader: unshaded
-    itemwieldedVisuals:
-      left:
-      - state: inhand-left-wielded-light
-        shader: unshaded
-      right:
-      - state: inhand-right-wielded-light
         shader: unshaded
   - type: MagazineVisuals
     magState: mag
