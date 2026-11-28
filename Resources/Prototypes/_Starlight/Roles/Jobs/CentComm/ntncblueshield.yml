@@ -9,7 +9,7 @@
     time: 72000 # 20h
   - !type:RoleTimeRequirement
     role: JobSecurityOfficer
-    time: 18000 # 5h
+    time: 36000 # 10h
   setPreference: false
   startingGear: NTNCHardsuitGear
   icon: JobIconNTNCBlueShield
@@ -23,3 +23,123 @@
   special:
     - !type:AddImplantSpecial
       implants: [ MindShieldImplant, DeathRattleImplantNanoTrasen, RadioImplantNanoTrasen ]
+
+- type: job
+  id: NTNCBlueShieldMedic
+  roleType: CorporateAligned
+  name: job-name-ntncblueshield-medic
+  description: job-description-ntncblueshield-medic
+  playTimeTracker: JobConsortiumBlueShield
+  requirements:
+    - !type:RoleTimeRequirement
+      role: JobBrigmedic
+      time: 5h
+    - !type:RoleTimeRequirement
+      role: JobConsortiumBlueShield
+      time: 1h
+  setPreference: false
+  startingGear: NTNCHardsuitGear
+  icon: JobIconNTNCBlueShield
+  rules: job-rules-corporate-aligned
+  supervisors: job-supervisors-centcom
+  bypassEorPacification: true
+  accessGroups:
+    - AllAccess
+  access:
+    - CentralCommand
+  special:
+    - !type:AddImplantSpecial
+      implants: [ MindShieldImplant, DeathRattleImplantNanoTrasen, RadioImplantNanoTrasen ]
+
+- type: job
+  id: NTNCBlueShieldFTL
+  roleType: CorporateAligned
+  name: job-name-ntncblueshield-ftl
+  description: job-description-ntncblueshield-ftl
+  playTimeTracker: JobConsortiumBlueShield
+  requirements:
+    - !type:RoleTimeRequirement
+      role: JobGunnerySergeant
+      time: 5h
+    - !type:RoleTimeRequirement
+      role: JobConsortiumBlueShield
+      time: 1h
+  setPreference: false
+  startingGear: NTNCHardsuitGear
+  icon: JobIconNTNCBlueShield
+  rules: job-rules-corporate-aligned
+  supervisors: job-supervisors-centcom
+  bypassEorPacification: true
+  accessGroups:
+    - AllAccess
+  access:
+    - CentralCommand
+  special:
+    - !type:AddImplantSpecial
+      implants: [ MindShieldImplant, DeathRattleImplantNanoTrasen, RadioImplantNanoTrasen ]
+
+- type: job
+  id: NTNCBlueShieldSL
+  roleType: CorporateAligned
+  name: job-name-ntncblueshield-sl
+  description: job-description-ntncblueshield-sl
+  playTimeTracker: JobConsortiumBlueShield
+  requirements:
+    - !type:RoleTimeRequirement
+      role: JobGunnerySergeant
+      time: 10h
+    - !type:DepartmentTimeRequirement
+      department: Command
+      time: 5h
+    - !type:RoleTimeRequirement
+      role: JobConsortiumBlueShield
+      time: 1h
+  setPreference: false
+  startingGear: NTNCHardsuitGear
+  icon: JobIconNTNCBlueShield
+  rules: job-rules-corporate-aligned
+  supervisors: job-supervisors-centcom
+  bypassEorPacification: true
+  accessGroups:
+    - AllAccess
+  access:
+    - CentralCommand
+  special:
+    - !type:AddImplantSpecial
+      implants: [ MindShieldImplant, DeathRattleImplantNanoTrasen, RadioImplantNanoTrasen ]
+
+- type: job
+  id: NTNCBlueShieldOfficer
+  roleType: CorporateAligned
+  name: job-name-ntncblueshield-officer
+  description: job-description-ntncblueshield-officer
+  playTimeTracker: JobConsortiumBlueShield
+  requirements:
+    - !type:RoleTimeRequirement
+      role: JobHeadOfSecurity
+      time: 10h
+    - !type:DepartmentTimeRequirement
+      department: Command
+      time: 15h
+    - !type:DepartmentTimeRequirement
+      department: CentralCommand
+      time: 5h
+    - !type:RoleTimeRequirement
+      role: JobConsortiumBlueShield
+      time: 1h
+    - !type:RolesRequirement
+      proto: ExtRolesReq
+  setPreference: false
+  startingGear: NTNCHardsuitGear
+  icon: JobIconNTNCBlueShield
+  rules: job-rules-corporate-aligned
+  supervisors: job-supervisors-centcom
+  bypassEorPacification: true
+  accessGroups:
+    - AllAccess
+  access:
+    - CentralCommand
+  special:
+    - !type:AddImplantSpecial
+      implants: [ MindShieldImplant, DeathRattleImplantNanoTrasen, RadioImplantNanoTrasen ]
+
